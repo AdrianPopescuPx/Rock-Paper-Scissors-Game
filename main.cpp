@@ -8,6 +8,7 @@ using namespace std;
 #define SCISSORS 3
 
 int main() {
+    
     random_device rd;
     uniform_int_distribution<int> dist(1, 3);
     int computerSelection = dist(rd);
@@ -81,16 +82,22 @@ int main() {
     }
 
     if (userSelection == ROCK && computerSelection == SCISSORS) {
+        cout << "ROCK beats SCISSORS: ";
         cout << "YOU WIN!";
     } else if (userSelection == ROCK && computerSelection == PAPER) {
+        cout << "PAPER beats ROCK: ";
         cout << "THE COMPUTER WINS!";
     } else if (userSelection == SCISSORS && computerSelection == PAPER) {
+        cout << "SCISSORS beats PAPER: ";
         cout << "YOU WIN!";
     } else if (userSelection == SCISSORS && computerSelection == ROCK) {
+        cout << "ROCK beats SCISSORS: ";
         cout << "THE COMPUTER WINS!";
     } else if (userSelection == PAPER && computerSelection == ROCK) {
+        cout << "PAPER beats ROCK: ";
         cout << "YOU WIN!";
     } else if (userSelection == PAPER && computerSelection == SCISSORS) {
+        cout << "SCISSORS beats PAPER: ";
         cout << "THE COMPUTER WINS!";
     }
 
